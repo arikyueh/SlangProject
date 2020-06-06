@@ -1,0 +1,11 @@
+This is a CSE220 Research Project for the Verilog Parser Slang
+
+Slang and how to build it can be done here: https://github.com/MikePopoloski/slang
+
+The specific tool I used to do my testing is on Rewritter.cpp found in the /slang/tools/rewriter directory.
+
+After making the build the executable is located in the build/bin folder 
+
+FullAdder.v is the input verilog file I feed into the rewritter.
+
+Usage: ./Rewritter <input verilog file>
