@@ -47,14 +47,14 @@ int main(int argc, char** argv) try {
         return 1;
     }
     Compilation compilation;
-    
+    Diagnostics localDiags;
     auto tree = SyntaxTree::fromFile(argv[1]);
     auto m=&tree->sourceManager();
 
     compilation.addSyntaxTree(tree);
     auto varEnd=tree->root().getLastToken();
     auto varStart=tree->root().getFirstToken();
-    //Preprocessor &P;
+    Preprocessor preprocessor(m, compilation, localDiags);
     //varToken.trivia()
     //Token varToken;
     //auto alloc=P.getAllocator();
